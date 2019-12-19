@@ -95,11 +95,13 @@ function fzf_key_bindings
   bind \ct __fzf_file_widget
   bind \cr __fzf_history_widget
   bind \ec __fzf_cd_widget
+  bind \t __fzf_complete
 
   if bind -M insert > /dev/null 2>&1
     bind -M insert \ct __fzf_file_widget
     bind -M insert \cr __fzf_history_widget
     bind -M insert \ec __fzf_cd_widget
+    bind -M insert \t __fzf_complete
   end
 
   function __fzf_parse_commandline -d 'Parse the current command line token and return split of existing filepath and rest of token'
