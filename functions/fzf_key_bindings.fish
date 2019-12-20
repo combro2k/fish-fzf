@@ -257,8 +257,10 @@ function fzf_key_bindings
         echo --multi
         __fzf_complete_opts_preview
     end
-
+    
     function __fzf_complete_opts -d 'fzf options for fish tab completion'
+        set -q FZF_COMPLETE; or set -l FZF_COMPLETE 0
+        
         switch $FZF_COMPLETE
             case 0
                 __fzf_complete_opts_0
